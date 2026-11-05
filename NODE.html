@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<div>
+		Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid ipsum, illum libero consequatur quos officia rem
+		doloribus quibusdam, expedita nulla animi, minima voluptatem at sit? Non libero nostrum quos. Sunt quod
+		praesentium possimus tenetur, enim atque eius sint quis maxime repellendus reprehenderit temporibus tempore
+		quaerat, ducimus delectus libero corrupti quia?
+		<ul id="list">
+			<li>1</li>
+			<li>2</li>
+			<li>3</li>
+		</ul>
+
+		<ol>
+			<li>4</li>
+			<li>5</li>
+			<li>6</li>
+		</ol>
+	</div>
+	<p>dsfksmngjashdbgupiash</p>
+	<script>
+		// по клику название тэга и объекта
+		document.addEventListener('click', function (event) {
+			alert(event.target)
+			alert(event.target.tagName)
+		})
+
+		// дочерние
+		const list = document.querySelector('#list');
+		let childList = list.children;
+		for (elem of childList) {
+			elem.setAttribute('style', 'padding: 10px')
+		}
+
+		// родители
+		let parent = list.parentElement;
+		parent.style.background = "red"
+
+		// соседи
+		const UlElement = document.querySelector('ul');
+		let sosedUl = UlElement.nextElementSibling;
+		sosedUl.style.background = "blue";
+		let childOl = sosedUl.children;
+		for (elem of childOl) {
+			elem.setAttribute('style', 'padding: 10px')
+		}
+
+		// первый ребенок
+		let firstUl = list.firstElementChild;
+		console.log(firstUl);
+		firstUl.setAttribute('style', 'color: green');
+	</script>
+</body>
+
+</html>

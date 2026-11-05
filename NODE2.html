@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<div id="article"></div>
+	<script>
+		const divElement = document.querySelector('#article');
+		// заголовок статьи
+		const h2Element = document.createElement('h2');
+		h2Element.textContent = "Заголовок статьи";
+		divElement.append(h2Element);
+
+		// первый абзац и второй
+		const p1 = document.createElement('p');
+		p1.textContent = "уга буга"
+
+		const p2 = document.createElement('p');
+		p2.textContent = "уга бугаааа"
+		divElement.append(p1, p2)
+
+		const h1 = document.createElement('h1');
+		h1.textContent = "Заголовок страницы";
+		// divElement.before(h1)
+		document.body.insertBefore(h1, divElement);
+	</script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .max{
+            width: 100vw;
+            height: 100vw;
+        }
+    </style>
+</head>
+<body>
+    <div class="max">
+        <article>Lorem ipsum dolor sit amet.</article>
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Nobis, itaque adipisci laboriosam animi sapiente repudiandae.</p>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis nam dolorem mollitia voluptatum sed aliquid, illo reprehenderit debitis facilis quibusdam?</div>
+    </div>
+
+    <script>
+        document.addEventListener('click', function(event){
+        alert(`Название тега: ${event.target.tagName}\nСодержимое: ${event.target.innerHTML}`)
+       })
+    </script>
+</body>
+</html>

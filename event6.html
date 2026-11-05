@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .none{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button>hide/show text</button>
+    <p>Lorem ipsum dolor sit amet.</p>
+    
+    <script>
+        const buttonElement = document.querySelector('button');
+        const pElement = document.querySelector('p');
+        buttonElement.addEventListener('click', function(){
+            pElement.classList.toggle('none')
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #elemDiv{
+            background-color: blue;
+            width: 100px;
+            height: 100px;
+        }
+
+        div{
+            padding: 10px;
+            margin: 10px;
+            display: inline-block;
+            background: #cecdcd;
+        }
+
+        body{
+            border:  10px solid green;
+        }
+    </style>
+</head>
+<body>
+    <div id="elemDiv"></div>
+    <div id="black">Закрасить в темный</div>
+    <div id="blue">Закрасить в синий</div>
+    <div id="white">Закрасить в белый</div>
+    <a href="https://ya.ru">перейти</a>
+ 
+    <script>
+        function say(event){
+            event.preventDefault();
+            // alert(`${this.tagName} + ${this.id}`);
+            alert(event.currentTarget);
+            alert("Элемент по которому кликнули"+event.target)
+        } 
+
+        function bgBlack(){
+            document.body.style.cssText='background-color: black; color: white'
+        }
+
+        function bgBlue(){
+            document.body.style.backgroundColor='blue'
+        }
+
+        function bgWhite(){
+            document.body.style.backgroundColor='white'
+        }
+
+        const black = document.querySelector('#black');
+        black.addEventListener('click', say);
+        black.addEventListener('mouseover', bgBlack);
+        black.addEventListener('mouseout', function(){
+            document.body.style.cssText='';
+        })    
+
+        const elemDiv = document.querySelector('#elemDiv');
+        elemDiv.addEventListener('click', say);
+
+        document.body.addEventListener('click', say);
+    </script>
+</body>
+</html>

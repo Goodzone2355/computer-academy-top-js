@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+        .size-40 {
+          font-size: 40px;
+        }
+        .color-grey {
+          color: grey;
+        }
+        .bg-yellow {
+          background: yellow;
+        }
+      </style>
+      
+</head>
+<body>
+    <div class='block'>	 
+        <h1>CSS </h1>
+            <p class="text"> CSS используется для определения стилей (правил) оформления документов — включая дизайн, вёрстку и вариации макета для различных устройств и размеров экрана. У такого способа форматирования несколько достоинств:</p>
+            <ul>
+                <li>теги не дублируются;</li>
+                <li>документ проще обслуживать;</li>
+                <li>внешний вид всего сайта можно изменить централизованно, а не корректировать форматирование каждой странички.</li>
+            </ul>
+            <p class="text">Стили можно разметить внутри тега HEAD или использовать отдельный CSS-файл.</p>
+            <p class="text"> У языка CSS относительно простой синтаксис. Сначала прописывается селектор — он выбирает конкретный элемент на странице. Потом, после фигурных скобок, указываются свойства со значениями — между ними ставится двоеточие. Сами свойства отделяются друг от друга точкой с запятой.</p>
+        </div>
+    
+    <script>
+        const textElements = document.querySelectorAll('.text');
+        for(elem of textElements){
+            elem.classList.add('size-40','color-grey','bg-yellow');
+        }
+
+        const blockElements = document.querySelectorAll('.block');
+        for(elem of blockElements){
+            elem.setAttribute('style', 'width: 580px; border:1px solid grey; margin: 15px 10px; padding: 20px')
+        }
+    </script>   
+</body>
+</html>

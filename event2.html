@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .unvisible{
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="text">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis cumque rem deleniti optio id ducimus suscipit modi cum minima nemo?</p>
+        <button id="closeBtn">Нажми, шоб скрыть</button>
+    </div>
+    <script>
+        const closeBtn = document.querySelector('#closeBtn');
+        const text = document.querySelector('#text');
+        closeBtn.addEventListener('click', function(){
+            text.classList.toggle('unvisible')
+        })
+    </script>
+</body>
+</html>

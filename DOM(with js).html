@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .block{
+            box-shadow: 0 0 10px rgb(20, 20, 25);
+            padding: 20px;
+        }
+
+        .alert{
+            font-family:'Courier New', Courier, monospace;
+            font-size: 18px;
+            color: grey;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h1 id="header">WWW</h1>
+        <p class="txt">Всеми́рная паути́на (англ. World Wide Web) — распределённая система, предоставляющая доступ к связанным между собой документам, расположенным на различных компьютерах, подключённых к сети Интернет. Для обозначения Всемирной паутины также используют слово веб (англ. web «паутина») и аббревиатуру WWW.</p>
+    </div>
+    <section>
+        <p>Июнь</p>
+        <p>Июль</p>
+        <p>Август</p>
+    </section>
+    <script>
+        // document.writeln('<div><h1>WWW</h1><p>Всеми́рная паути́на (англ. World Wide Web) — распределённая система, предоставляющая доступ к связанным между собой документам, расположенным на различных компьютерах, подключённых к сети Интернет. Для обозначения Всемирной паутины также используют слово веб (англ. web «паутина») и аббревиатуру WWW.</p></div>');
+        // document.writeln('<a href="https://ya.ru/">YA.RU</a>');
+        // document.writeln('<a href="https://google.ru/">GOOGLE.RU</a>');
+        // let linksElement = document.links;
+
+        // for(elem of linksElement){
+        //     document.writeln('<li>'+elem+'</li>');
+        // }
+        // document.writeln('<li>'+linksElement[0]+'</li>');
+        // document.location=linksElement[0]
+
+        const divElement = document.querySelector('div');
+        console.log(divElement);
+
+        const h1Element = document.getElementById('header');
+        console.log(h1Element);
+
+        const pElement = document.querySelector('p.txt');
+        console.log(pElement);
+
+        console.log(h1Element.innerHTML);
+        h1Element.innerHTML="HTML";
+
+        pElement.innerHTML="<dfn>HTML</dfn> - HyperText Markup Language";
+
+        const pElements = document.querySelectorAll('section p');
+        pElements[0].textContent="May";
+        let arrElem=[];
+        for(elem of pElements){
+            document.writeln('<li>'+elem.textContent+'</li>');
+            arrElem.push(elem.textContent);
+            elem.style.color="green";
+        }
+        console.log(arrElem)
+
+        let arrFruits = ['яблоко', 'груша', 'апельсин'];
+        // for(elem of arrFruits){
+        //      document.writeln('<li>'+elem+'</li>');
+        // }
+        document.writeln("<ul>");
+        arrFruits.forEach(elem=>document.writeln('<li>'+elem+'</li>'));
+        document.writeln("<ul>");
+
+        h1Element.style.color='blue';
+        pElement.style.color='blue';
+        divElement.style.backgroundColor='grey';
+        document.body.style.backgroundColor='WhiteSmoke';
+        document.body.style.fontFamily="Verdana";
+        h1Element.style.cssText='color: red; font-size: 40px';
+
+        divElement.setAttribute('style', 'border: solid 1px blue; width: 400px');
+        console.log(divElement.getAttribute('style'));
+
+        pElement.setAttribute('style', h1Element.getAttribute('style'));
+
+        divElement.setAttribute('class', 'block');
+
+        // classList
+        divElement.classList.add('alert');
+        divElement.classList.remove('block');
+    </script>
+</body>
+</html>
